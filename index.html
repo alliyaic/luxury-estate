@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom right, #2980b9, #6dd5ed);
+            color: white;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5em;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            display: inline-block;
+            text-align: left;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card:nth-child(odd) {
+            background-color: #ecf0f1; /* Light grey for odd cards */
+        }
+        .card:nth-child(even) {
+            background-color: #bdc3c7; /* Darker grey for even cards */
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            padding: 10px;
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+        .card p {
+            padding: 0 10px 10px;
+            color: #34495e;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+            transition: background-color 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #3498db;
+        }
+        .testimonial {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .testimonial:hover {
+            background-color: #bdc3c7;
+            transform: translateY(-2px);
+        }
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
+            }
+        }
+        .info-section {
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .info-section h2 {
+            color: #2980b9;
+        }
+        .info-section p {
+            color: #34495e;
+            padding: 10px;
+        }
+        /* Background for properties section */
+        #properties {
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center/cover;
+            background-size: cover;
+            padding: 40px 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luxury Real Estate</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#info">More Info</a></li> <!-- Новая ссылка на секцию с информацией -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <h1>Welcome to Your Dream Home</h1>
+        <p>Your future begins here.</p>
+    </section>
+
+    <section id="properties">
+        <h2 style="text-align: center;">Featured Properties</h2>
+        <div class="card">
+            <h3>Beautiful Villa</h3>
+            <p>Located in a serene neighborhood, this villa offers luxury and comfort.</p>
+        </div>
+        <div class="card">
+            <h3>Modern Apartment</h3>
+            <p>A modern apartment with stunning views and high-end finishes.</p>
+        </div>
+        <div class="card">
+            <h3>Cozy Cottage</h3>
+            <p>This charming cottage is perfect for a quiet getaway.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" style="padding: 20px;">
+        <h2 style="text-align: center;">What Our Clients Say</h2>
+        <div class="testimonial">
+            <h3>John Doe</h3>
+            <p>"I found my dream home with Luxury Real Estate! The process was smooth and the team was incredibly helpful."</p>
+        </div>
+        <div class="testimonial">
+            <h3>Jane Smith</h3>
+            <p>"Fantastic service! They really understood what I was looking for and delivered."</p>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: 20px;">
+        <h2 style="text-align: center;">Get In Touch</h2>
+        <form style="max-width: 600px; margin: auto;">
+            <input type="text" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+            <textarea placeholder="Your Message" required style="width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;" rows="5"></textarea>
+            <button type="submit" style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #2980b9; color: white; cursor: pointer;">Send</button>
+        </form>
+    </section>
+
+    <section id="info" class="info-section">
+        <h2>More Information</h2>
+        <p>Discover a wide range of luxury properties, from modern apartments to stunning villas.</p>
+        <p>Contact us today to learn more about how we can help you find your perfect home!</p>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Luxury Real Estate. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+
+    <script>
+        // Show the back-to-top button when scrolling down
+        window.onscroll = function() {
+            const button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button
+            }}
